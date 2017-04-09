@@ -1,0 +1,1 @@
+INSERT INTO `medicar`.`usr_action` (`id`, `name`, `action`, `controller`) VALUES (NULL, 'Listar mecánicos', 'index', 'mecanico'), (NULL, 'Registrar nuevo mecánico', 'new', 'mecanico'), (NULL, 'Editar mecánico', 'edit', 'mecanico');
