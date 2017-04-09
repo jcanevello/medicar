@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpunit/phpunit": "3.7.24",
+        "phing/phing": "dev-master",
+        "dompdf/dompdf": "dev-master"
+    },
+    "require-dev": {
+        "kohana/unittest": "3.3.*@dev"
+    },
+    "config": {
+        "vendor-dir": "application/vendor"
+    }
+}

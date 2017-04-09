@@ -1,0 +1,364 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/01/2016, 11:47:00 AM
+    Author     : jean
+*/
+
+.form .panel-heading {
+    padding: 0;
+}
+
+.form .panel-heading .panel-title {
+    color: rgb(121, 121, 121);
+}
+
+.panel-detail .form-group {
+    margin-bottom: 0px;
+}
+
+.panel-detail .form-group .form-control-static {
+    margin-top: 0px;
+}
+
+.lead {
+    color: #797979 !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    font-size: 16px !important;
+}
+
+.control-label {
+    color: #000000;
+}
+
+.centrar {
+    float: none !important;
+    margin: auto !important;
+}
+
+.table>thead>tr>th,
+.table>tbody>tr>td {
+    vertical-align: middle !important;
+    /*text-transform: uppercase;*/
+    padding: 2px 4px !important;
+    font-size: 13px;
+}
+
+.btn.close {
+    font-weight: normal;
+    float: none;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+input,select,textArea,.form-control-static {
+    text-transform: uppercase !important;
+}
+
+#form-login input,#form-login select,#form-login textArea,#form-login .form-control-static {
+    text-transform: none !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.modal-xlg {
+    width: 95% !important;
+}
+
+table.table>thead>tr>th {
+    text-align: center;
+}
+
+.navbar-form input {
+    min-width: 250px;
+    text-transform: lowercase !important;
+    font-style: italic; 
+}
+
+.navbar-form .btn {
+    display: inline-block !important;
+}
+
+.primary {
+    background-color: #6e8cd7;
+    color: #ffffff;
+}
+
+.slimScrollBar {
+    width: 10px !important;
+}
+
+.table-head3,
+.table-head2,
+.table-head {
+    text-align: center;
+    font-weight: bold;
+}
+
+.table>thead>tr.table-head>th,
+.table>tbody>tr.table-head>td {
+    padding: 7px 4px !important;
+}
+
+.table>tbody>tr.table-head3>td {
+    font-size: 20px !important;
+}
+
+.text-no-uppercase {
+    text-transform: none !important;
+}
+
+hr {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.p-l-10 {
+    padding-left: 10px !important;
+}
+
+.form-control-static {
+    min-height: 26px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+.form-horizontal .control-label {
+    padding-top: 3px !important;
+}
+
+.help-block {
+    margin-top: 0px !important;
+    font-size: 12px !important;
+}
+
+.color_red {
+    color: red !important;
+}
+
+#datatable.table>thead>tr>th {
+    padding-left: 8px !important;
+    padding-right: 35px !important;
+    padding: 8px 0px 0px !important;
+    text-align: left !important;
+}
+
+.form-button {
+    margin-top: 24px;
+}
+
+.table>tbody>tr>td {
+    font-size: 12px !important;
+}
+
+.subtitulo{
+    background-color: #f5f5f5;
+}
+
+.table-titulo {
+    background-color: #faf2cc !important;
+}
+
+.table-titulo2 {
+    background-color: #faf2cc !important;
+    font-size: 17px !important;
+}
+
+.table>tbody>tr.table-titulo2>td {
+    font-size: 17px !important;
+}
+
+#datatable2>thead>tr>th {
+    padding-right: 25px !important;
+    text-align: left !important;
+}
+
+.modal-cf {
+    width: 450px;
+}
+
+.modal-cf .modal-content{
+    padding: 15px !important;
+}
+
+.modal-cf .modal-body {
+    padding: 15px 0px 0px !important;
+}
+
+.form-footer {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #dfdfdf;
+    text-align: right;
+}
+
+.box-confirmation-registered_pay {
+    padding: 10px;
+    border: 1px solid #FF9800;
+    border-radius: 5px;
+    background: #FFF176;
+    text-align: center;
+}
+
+.list-group-custom {
+    border-right: 1px solid #eeeeee;
+}
+
+.list-group-custom a.list-group-item {
+    border: none;
+    color: #3572b0;
+    padding: 7px 10px !important;
+}
+
+#topbar-custom.topbar .navbar .nav > li > a,
+#topbar-custom.topbar .navbar,
+#topbar-custom.topbar .navbar .navbar-form .search-bar,
+#topbar-custom.topbar .navbar .navbar-form,
+#topbar-custom.topbar .navbar .button-menu-mobile,
+#topbar-custom.topbar .topbar-left .logo,
+#topbar-custom.topbar .topbar-left {
+    height: 45px;
+    line-height: 41px;
+    background-color: #ffffff;
+    margin: 0px;
+    min-height: 45px;
+}
+
+.md.md-account-circle {
+    font-size: 35px;
+    line-height: initial;
+}
+
+body.fixed-left .side-menu.left {
+    top: 45px;
+}
+
+.content-page > .content {
+    margin-top: 30px !important;
+}
+
+.user-tabs {
+    margin-right: -20px;
+    /*    margin-left: -10px;
+        padding: 0px;*/
+}
+
+table.table-custom>thead>tr>th {
+    text-align: left;
+}
+
+.bg-config-custom {
+    height: 100px;
+    padding: 20px 0px;
+}
+
+.profile-info-name h2 {
+    margin-left: 20px;
+    line-height: 55px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0px black, 0 -1px black;
+}
+
+.form-control-static-custom {
+    text-transform: lowercase !important;
+}
+
+.profile-tab-content {
+    margin-top: 25px;
+}
+
+.mobile .side-menu.left,
+.fixed-left-void .side-menu.left {
+    top: 45px;
+}
+
+.fixed-left-void #topbar-custom.topbar .topbar-left .logo {
+    margin-left: -120px;
+}
+
+.navbar-form .search-bar {
+    display: inline-block;
+    width: auto !important;
+}
+
+.show-pass {
+    text-transform: none !important;
+}
+
+@media(max-width:990px)
+{
+    .mobile .enlarged #topbar-custom.topbar .topbar-left .logo {
+        margin-left: -120px;
+    }
+
+    .navbar-form input {
+        /*min-width: auto;*/
+    }
+}
+
+@media(max-width:640px)
+{
+    .mobile .enlarged #topbar-custom.topbar .topbar-left .logo {
+        margin-left: -120px;
+    }
+
+    .navbar-form .search-bar {
+        min-width: auto !important;
+    }
+
+    .modal-body,
+    .panel-body {
+        overflow-y: auto !important;
+    }
+
+    .table .btn {
+        margin-bottom: 3px;
+    }
+
+    .mobile select.form-control,
+    .mobile input.form-control {
+        margin-bottom: 5px !important;
+    }
+
+    .mobile .block-btns-eva {
+        float: none !important;
+    }
+
+    .mobile .block-btns-eva .btn {
+        width: 100%;
+        margin: 3px 0px;
+        float: none !important;
+    }
+
+
+}
+
+@media(max-width:480px)
+{
+    .mobile .enlarged .btn-search {
+        display: none !important;
+    }
+
+    .mobile .forced .search-bar {
+        display: inline-block !important;
+    }
+
+    .mobile .forced.enlarged .search-bar {
+        display: none !important;
+    }
+
+    .mobile .forced .side-menu.left {
+        top: 90px !important;
+    }
+
+    .mobile .enlarged .side-menu.left,
+    .mobile .forced.enlarged .side-menu.left {
+        top: 45px !important;
+    }
+
+}
