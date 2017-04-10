@@ -144,4 +144,13 @@ class Controller_Serv_Vehiculo extends Controller_Main {
             ->set('placa', $this->request->post('placa'));
     }
 
+    public function action_listar()
+    {
+        $aVehiculo = ORM::factory('Serv_Vehiculo')
+            ->find_all();
+
+        $this->template->content = View::factory('vehiculo/list')
+            ->set('aVehiculo', $aVehiculo);
+    }
+
 }

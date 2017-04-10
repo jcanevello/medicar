@@ -32,6 +32,12 @@
                         Garantía
                     </a>
                 </li>
+                <li class="has_sub"><a href="#" class="waves-effect waves-light"><i class="md md-list"></i> <span>Reportes</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="/vehiculo/listar">Lista de vehículos</a></li>
+                        <li><a href="/solicitud/listall">Lista de Mantenimientos</a></li>
+                    </ul>
+                </li>
                 <li class="has_sub"><a href="#" class="waves-effect waves-light"><i class="md md-settings"></i> <span>Configuración</span> <span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">
                         <li><a href="/marca">Marcas y modelos de automoviles</a></li>

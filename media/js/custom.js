@@ -60,6 +60,8 @@ jQuery(document).ready(function ($) {
         });
         return false;
     })
+    
+    $('#datatable').dataTable()
 
     $('body').on('submit', '#search-pareja', function () {
         var $this = $(this)

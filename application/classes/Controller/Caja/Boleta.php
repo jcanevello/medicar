@@ -25,7 +25,7 @@ class Controller_Caja_Boleta extends Controller_Main {
                 ->and_where('estado', '=', 1)
                 ->find_all();
 
-            $aGarantiaM = ORM::factory('Serv_garantiamecanico')
+            $aGarantiaM = ORM::factory('Serv_Garantiamecanico')
                 ->join('garantia')->on('garantia.solicitud_id', '=', 'serv_garantiamecanico.garantia_id')
                 ->join('solicitud')->on('solicitud.id', '=', 'garantia.solicitud_id')
                 ->where('solicitud.placa', '=', $oVehiculo->placa)

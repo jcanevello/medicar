@@ -97,6 +97,9 @@ class Controller_Serv_Solicitud extends Controller_Main {
         if (!$oSolicitud->loaded())
             $this->redirect('/', 'Error al obtener información de mantenimiento');
 
+        if ($oSolicitud->estado == 2)
+            Util::redirect('/', 'La solicitud ya está terminada.');
+
         if ($this->request->method() == 'POST')
         {
             $oVehiculo = ORM::factory('Serv_Vehiculo')
@@ -111,6 +114,15 @@ class Controller_Serv_Solicitud extends Controller_Main {
 
         $this->response->body(View::factory('solicitud/cerrar')
                 ->set('oSolicitud', $oSolicitud));
+    }
+
+    public function action_listall()
+    {
+        $aSolicitudes = ORM::factory('Serv_Solicitud')
+            ->find_all();
+
+        $this->template->content = View::factory('solicitud/list_all')
+            ->set('aSolicitudes', $aSolicitudes);
     }
 
 }

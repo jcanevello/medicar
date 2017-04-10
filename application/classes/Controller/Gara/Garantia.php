@@ -78,6 +78,9 @@ class Controller_Gara_Garantia extends Controller_Main {
         if (!$oGarantiaM->loaded())
             Util::redirect('/', 'Error al obtener información');
 
+        if ($oGarantiaM->estado == 2)
+            Util::redirect('/', 'El trabajo ya está terminado');
+
         if ($this->request->method() == 'POST')
         {
             $oGarantiaM->estado = 3;
