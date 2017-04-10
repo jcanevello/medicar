@@ -75,11 +75,9 @@ class Controller_Serv_Solicitud extends Controller_Main {
             ->where('placa', '=', $oSolicitud->placa)
             ->find();
 
-        $aGarantiaM = DB::select(array(DB::expr('CONCAT("m.nombre", " ", "m.apellidos")'), 'nombre'), 'gm.estado', 'gm.created_at')
-            ->from(array('garantia_mecanico', 'gm'))
-            ->join(array('mecanico', 'm'))->on('m.id', '=', 'gm.mecanico_id')
-            ->where('gm.garantia_id', '=', $oSolicitud->id)
-            ->execute();
+        $aGarantiaM = ORM::factory('Serv_Garantiamecanico')
+            ->where('garantia_id', '=', $oSolicitud->id)
+            ->find_all();
 
         $oGarantia = ORM::factory('Serv_Garantia')
             ->where('solicitud_id', '=', $oSolicitud->id)

@@ -10,7 +10,8 @@ if (is_file(APPPATH . 'classes/Kohana' . EXT))
 {
     // Application extends the core
     require APPPATH . 'classes/Kohana' . EXT;
-} else
+}
+else
 {
     // Load empty core extension
     require SYSPATH . 'classes/Kohana' . EXT;
@@ -176,7 +177,7 @@ Route::set('config', '(<controller>(/<action>(/<id>(/<id2>))))', array(
     ));
 
 Route::set('serv', '(<controller>(/<action>(/<id>(/<id2>))))', array(
-        'controller' => '(boleta|solicitud|vehiculo)'
+        'controller' => '(solicitud|vehiculo)'
     ))
     ->defaults(array(
         'directory' => 'serv',
@@ -184,10 +185,18 @@ Route::set('serv', '(<controller>(/<action>(/<id>(/<id2>))))', array(
     ));
 
 Route::set('gara', '(<controller>(/<action>(/<id>(/<id2>))))', array(
-        'controller' => '(garantia)'
+        'controller' => '(garantia|garantiamecanico)'
     ))
     ->defaults(array(
         'directory' => 'gara',
+        'action' => 'index',
+    ));
+
+Route::set('caja', '(<controller>(/<action>(/<id>(/<id2>))))', array(
+        'controller' => '(boleta)'
+    ))
+    ->defaults(array(
+        'directory' => 'caja',
         'action' => 'index',
     ));
 

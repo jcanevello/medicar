@@ -17,6 +17,19 @@ class Model_Serv_Solicitud extends ORM {
 
         return $oServicio;
     }
+
+    public function oServicio2()
+    {
+        $oServicio = DB::select('s.nombre', 'ss.precio')
+            ->from(array('servicio', 's'))
+            ->join(array('solicitud_servicio', 'ss'))->on('ss.servicio_id', '=', 's.id')
+            ->where('ss.solicitud_id', '=', $this->id)
+            ->where('s.tipo', '=', 1)
+            ->execute();
+
+        return $oServicio[0];
+    }
+
     public function oServicioE()
     {
         $oServicio = ORM::factory('Conf_Servicio')
@@ -26,6 +39,18 @@ class Model_Serv_Solicitud extends ORM {
             ->find();
 
         return $oServicio;
+    }
+
+    public function oServicioE2()
+    {
+        $oServicio = DB::select('s.nombre', 'ss.precio')
+            ->from(array('servicio', 's'))
+            ->join(array('solicitud_servicio', 'ss'))->on('ss.servicio_id', '=', 's.id')
+            ->where('ss.solicitud_id', '=', $this->id)
+            ->where('s.tipo', '=', 2)
+            ->execute();
+
+        return $oServicio[0];
     }
 
     public function oTecnico()
@@ -79,5 +104,5 @@ class Model_Serv_Solicitud extends ORM {
 
         return $oGarantia->f_final;
     }
-
+    
 }

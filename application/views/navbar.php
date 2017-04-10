@@ -21,13 +21,13 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="/client/new" class="waves-effect waves-light">
+                    <a href="/boleta/buscarservicios/" class="waves-effect waves-light">
                         <i class="md md-attach-money"></i>
                         Caja
                     </a>
                 </li>
                 <li class="">
-                    <a href="/client/new" class="waves-effect waves-light">
+                    <a href="/garantia/buscar" class="waves-effect waves-light">
                         <i class="md md-star"></i>
                         Garantía
                     </a>

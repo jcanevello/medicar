@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </form>
-                <?php if ($oSolicitud->estado != 3): ?>
+                <?php if ($oSolicitud->estado == 1): ?>
                     <a class="btn btn-inverse btn-sm m-b-10 btn-modal-global pull-right" data-toggle="modal" data-target="#modal-global" data-title="Cancelar Solicitud" data-action="/solicitud/cerrar/<?php echo $oSolicitud->id ?>" >Cancelar solicitud</a>
                 <?php endif ?>
             </div>
@@ -81,6 +81,9 @@
     </div>
     <div class="panel-body">
         <div class="panel-body">
+            <?php if ($oGarantia->estado == 1): ?>
+                <a class="btn btn-primary btn-sm m-b-10 btn-modal-global" data-toggle="modal" data-target="#modal-global" data-title="Registrar trabajo de garantía" data-action="/garantia/nuevo/<?php echo $oSolicitud->id ?>" >Registrar trabajo de garantía</a>
+            <?php endif ?>
             <div class="form-horizontal">
                 <div class="form-group">
                     <label for="first_name" class="control-label col-sm-3">Fecha Vencimiento de garantía:</label>
@@ -107,9 +110,11 @@
                         <tr>
                             <td><?php echo Util::date_format_text($oGarantiaM->created_at) ?></td>
                             <td><?php echo $oGarantiaM->oTecnico()->fullName() ?></td>
-                            <td><span class="label <?php echo $oGarantiaM->get_estado_label() ?>"><?php echo $oGarantia->get_estado() ?></span></td>
+                            <td><span class="label <?php echo $oGarantiaM->get_estado_label() ?>"><?php echo $oGarantiaM->get_estado() ?></span></td>
                             <td>
-
+                                <?php if ($oGarantiaM->estado == 1): ?>
+                                    <a class="btn btn-inverse btn-sm m-b-10 btn-modal-global" data-toggle="modal" data-target="#modal-global" data-title="Cancelar" data-action="/garantia/cancelar/<?php echo $oGarantiaM->id ?>" >Cancelar</a>
+                                <?php endif ?>
                             </td>
                         </tr>
                     <?php endforeach ?>
