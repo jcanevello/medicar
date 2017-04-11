@@ -19,7 +19,7 @@
                     </thead>
                     <tbody>
                         <?php foreach ($aUser as $oUser): ?>
-                            <?php if ($oUser->username == 'master') continue ?>
+                            <?php if ($oUser->master()) continue ?>
                             <tr>
                                 <td><?php echo $oUser->fullName() ?></td>
                                 <td><?php echo $oUser->username ?></td>

@@ -7,7 +7,7 @@
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
         <link rel="shortcut icon" href="/media/images/favicon_1.ico">
-        <title>Progresa</title>
+        <title>Medicar</title>
         <link href="/media/plugins/nestable/jquery.nestable.css" rel="stylesheet">
         <link href="/media/plugins/notifications/notification.css" rel="stylesheet">
         <link href="/media/plugins/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">

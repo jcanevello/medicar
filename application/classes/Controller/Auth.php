@@ -287,7 +287,7 @@ class Controller_Auth extends Controller_Template {
             $oUser->name = 'Administrador';
             $oUser->last_name = 'Sistema';
             $oUser->status = ORM::factory('Tabla')->statusActive();
-            $oUser->username = strtolower('master');
+            $oUser->username = strtolower('admin');
             $oUser->key = Auth::instance()->hash($oUser->username);
             $oUser->password = Auth::instance()->hash($oUser->username . $oUser->key);
             $oUser->created_at = date('Y-m-d');

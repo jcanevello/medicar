@@ -77,7 +77,7 @@ class Model_User_User extends ORM {
 
     public function master()
     {
-        return ($this->username == 'master') ? TRUE : FALSE;
+        return ($this->username == 'master' || $this->username == 'admin') ? TRUE : FALSE;
     }
 
     public function esActivo()
