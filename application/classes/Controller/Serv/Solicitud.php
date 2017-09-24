@@ -75,11 +75,9 @@ class Controller_Serv_Solicitud extends Controller_Main {
             ->where('placa', '=', $oSolicitud->placa)
             ->find();
 
-        $aGarantiaM = DB::select(array(DB::expr('CONCAT("m.nombre", " ", "m.apellidos")'), 'nombre'), 'gm.estado', 'gm.created_at')
-            ->from(array('garantia_mecanico', 'gm'))
-            ->join(array('mecanico', 'm'))->on('m.id', '=', 'gm.mecanico_id')
-            ->where('gm.garantia_id', '=', $oSolicitud->id)
-            ->execute();
+        $aGarantiaM = ORM::factory('Serv_Garantiamecanico')
+            ->where('garantia_id', '=', $oSolicitud->id)
+            ->find_all();
 
         $oGarantia = ORM::factory('Serv_Garantia')
             ->where('solicitud_id', '=', $oSolicitud->id)
@@ -99,6 +97,9 @@ class Controller_Serv_Solicitud extends Controller_Main {
         if (!$oSolicitud->loaded())
             $this->redirect('/', 'Error al obtener información de mantenimiento');
 
+        if ($oSolicitud->estado == 2)
+            Util::redirect('/', 'La solicitud ya está terminada.');
+
         if ($this->request->method() == 'POST')
         {
             $oVehiculo = ORM::factory('Serv_Vehiculo')
@@ -113,6 +114,15 @@ class Controller_Serv_Solicitud extends Controller_Main {
 
         $this->response->body(View::factory('solicitud/cerrar')
                 ->set('oSolicitud', $oSolicitud));
+    }
+
+    public function action_listall()
+    {
+        $aSolicitudes = ORM::factory('Serv_Solicitud')
+            ->find_all();
+
+        $this->template->content = View::factory('solicitud/list_all')
+            ->set('aSolicitudes', $aSolicitudes);
     }
 
 }
